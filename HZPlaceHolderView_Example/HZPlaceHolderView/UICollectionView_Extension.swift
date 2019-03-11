@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol HZCollectionViewPlaceHolderDelegate: class {
+public protocol HZCollectionViewPlaceHolderDelegate: class {
     func makePlaceHolderView() -> UIView?
     func enableScrollWhenPlaceHolderViewShowing() -> Bool?
 }
