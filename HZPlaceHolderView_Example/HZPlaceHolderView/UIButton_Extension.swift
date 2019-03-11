@@ -84,3 +84,98 @@ extension UIButton {
 }
 
 
+// MARK: - UIButton IB Extension
+@IBDesignable
+public extension UIButton  {
+    
+    @IBInspectable public var hz_corner: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
+            self.layer.masksToBounds = false
+        }
+    }
+    
+    // MARK: button的image位置间隔 上0 下1 左2 右3     如：0,7   代表image在上 、title与image间隔为7
+    @IBInspectable public var hz_edgeInsetsStyleSpace: String {
+        get {
+            return self.hz_edgeInsetsStyleSpace
+        }
+        
+        set {
+//            guard newValue.contains(",", compareOption: .caseInsensitive) else {
+//                return
+//            }
+            self.setEdgeInsetsStyleSpace(newValue: newValue)
+        }
+    }
+    
+    
+    fileprivate func setEdgeInsetsStyleSpace(newValue: String) {
+        guard newValue.contains(",") else { return }
+        
+        let array = newValue.components(separatedBy: ",")
+        guard array.count == 2 else {
+            return
+        }
+        
+        let style = NumberFormatter().number(from: array[0])?.intValue
+        let space = CGFloat(Double(array[1])!)
+        
+        guard let _style = style else { return }
+        
+        if _style <= 3 {
+            /**
+             *  拿到imageView和titleLabel的宽、高
+             */
+            let imageWidth: CGFloat = (self.imageView?.intrinsicContentSize.width)!
+            let imageHeight: CGFloat = (self.imageView?.intrinsicContentSize.height)!
+            
+            var labelWidth: CGFloat = 0.0
+            var labelHeight: CGFloat = 0.0
+            
+            if #available(iOS 8.0, *) {
+                labelWidth = (self.titleLabel?.intrinsicContentSize.width)!
+                labelHeight = (self.titleLabel?.intrinsicContentSize.height)!
+            }else{
+                labelWidth = (self.titleLabel?.frame.size.width)!
+                labelHeight = (self.titleLabel?.frame.size.height)!
+            }
+            
+            /**
+             *  声明全局的imageEdgeInsets和labelEdgeInsets
+             */
+            var imageEdgeInsets: UIEdgeInsets = .zero
+            var labelEdgeInsets: UIEdgeInsets = .zero
+            
+            /**
+             *  根据style和space算出imageEdgeInsets和labelEdgeInsets的值
+             */
+            switch _style {
+            case 0:  // 上
+                imageEdgeInsets = UIEdgeInsets(top: -labelHeight - space / 2.0, left: 0, bottom: 0, right: -labelWidth)
+                labelEdgeInsets = UIEdgeInsets(top: 0, left: -imageWidth, bottom: -imageHeight - space / 2.0, right: 0)
+            case 1:  // 下
+                imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: -labelHeight - space / 2.0, right: -labelWidth)
+                labelEdgeInsets = UIEdgeInsets(top: -(imageHeight + space / 2.0), left: -imageWidth, bottom: 0, right: 0)
+            case 2:  // 左
+                imageEdgeInsets = UIEdgeInsets(top: 0, left: -space / 2.0, bottom: 0, right: space / 2)
+                labelEdgeInsets = UIEdgeInsets(top: 0, left: space / 2, bottom: 0, right: -space / 2)
+            case 3:  // 右
+                imageEdgeInsets = UIEdgeInsets(top: 0, left: labelWidth + space / 2.0, bottom: 0, right: -labelWidth - space / 2.0)
+                labelEdgeInsets = UIEdgeInsets(top: 0, left: -imageWidth - space / 2.0, bottom: 0, right: imageWidth + space / 2.0)
+            default: break
+                
+            }
+            
+            /**
+             *  赋值
+             */
+            self.titleEdgeInsets = labelEdgeInsets
+            self.imageEdgeInsets = imageEdgeInsets
+        }
+    }
+    
+}

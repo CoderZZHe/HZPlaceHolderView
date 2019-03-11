@@ -56,10 +56,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ViewController: HZTableViewPlaceHolderDelegate {
     
-    func enableScrollWhenPlaceHolderViewShowing() -> Bool? {
-        return nil
-    }
-    
     func makePlaceHolderView() -> UIView? {
         return HZPlaceHolderView.createWithType(.downloadPage)
     }

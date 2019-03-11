@@ -13,15 +13,11 @@ public protocol HZTableViewPlaceHolderDelegate: class {
     func enableScrollWhenPlaceHolderViewShowing() -> Bool?
 }
 
-//extension HZTableViewPlaceHolderDelegate {
-//    func makePlaceHolderView() -> UIView? {
-//        return nil
-//    }
-//
-//    func enableScrollWhenPlaceHolderViewShowing() -> Bool? {
-//        return nil
-//    }
-//}
+public extension HZTableViewPlaceHolderDelegate {
+    func enableScrollWhenPlaceHolderViewShowing() -> Bool? {
+        return nil
+    }
+}
 
 extension UITableView {
     
