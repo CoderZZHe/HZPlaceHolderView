@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4A5FD5E2236689C0004DAFC /* HZPlaceHolderView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A5FD5D2236689C0004DAFC /* HZPlaceHolderView_Extension.swift */; };
 		E4FA664F22364BA800ECC82E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA664E22364BA800ECC82E /* AppDelegate.swift */; };
 		E4FA665122364BA800ECC82E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA665022364BA800ECC82E /* ViewController.swift */; };
 		E4FA665422364BA800ECC82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4FA665222364BA800ECC82E /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4A5FD5D2236689C0004DAFC /* HZPlaceHolderView_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZPlaceHolderView_Extension.swift; sourceTree = "<group>"; };
 		E4FA664B22364BA800ECC82E /* HZPlaceHolderView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZPlaceHolderView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FA664E22364BA800ECC82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4FA665022364BA800ECC82E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				E4FA666022364BE900ECC82E /* HZPlaceHolderView */,
 				E4FA664E22364BA800ECC82E /* AppDelegate.swift */,
 				E4FA665022364BA800ECC82E /* ViewController.swift */,
+				E4A5FD5D2236689C0004DAFC /* HZPlaceHolderView_Extension.swift */,
 				E4FA665222364BA800ECC82E /* Main.storyboard */,
 				E4FA665522364BA800ECC82E /* Assets.xcassets */,
 				E4FA665722364BA900ECC82E /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 				E4FA666C22364D5B00ECC82E /* HZPlaceHolderView.swift in Sources */,
 				E4FA665122364BA800ECC82E /* ViewController.swift in Sources */,
 				E4FA664F22364BA800ECC82E /* AppDelegate.swift in Sources */,
+				E4A5FD5E2236689C0004DAFC /* HZPlaceHolderView_Extension.swift in Sources */,
 				E4FA666822364C4600ECC82E /* UITableview_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

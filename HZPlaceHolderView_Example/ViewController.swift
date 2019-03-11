@@ -57,7 +57,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 extension ViewController: HZTableViewPlaceHolderDelegate {
     
     func makePlaceHolderView() -> UIView? {
-        return HZPlaceHolderView.createWithTitleImage("没有数据哦~", image: "noData_default")
+        return HZPlaceHolderView.createWithType(.downloadPage)
     }
     
 }
