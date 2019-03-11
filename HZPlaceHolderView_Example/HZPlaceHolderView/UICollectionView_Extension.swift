@@ -13,15 +13,15 @@ public protocol HZCollectionViewPlaceHolderDelegate: class {
     func enableScrollWhenPlaceHolderViewShowing() -> Bool?
 }
 
-extension HZCollectionViewPlaceHolderDelegate {
-    func makePlaceHolderView() -> UIView? {
-        return nil
-    }
-    
-    func enableScrollWhenPlaceHolderViewShowing() -> Bool? {
-        return nil
-    }
-}
+//extension HZCollectionViewPlaceHolderDelegate {
+//    func makePlaceHolderView() -> UIView? {
+//        return nil
+//    }
+//
+//    func enableScrollWhenPlaceHolderViewShowing() -> Bool? {
+//        return nil
+//    }
+//}
 
 extension UICollectionView {
     
