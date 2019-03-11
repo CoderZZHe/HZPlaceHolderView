@@ -10,8 +10,8 @@ import UIKit
 
 public class HZPlaceHolderView: UIView {
 
-    private(set) var button: UIButton?
-    private(set) var titleLabel: UILabel?
+    private(set) var refreshButton: UIButton?
+    private(set) var placeHolderTitleLabel: UILabel?
     
     fileprivate var titleString: String?
     fileprivate var image: UIImage?
@@ -64,7 +64,7 @@ public class HZPlaceHolderView: UIView {
         titleLabel.font = UIFont.systemFont(ofSize: 14)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
-        self.titleLabel = titleLabel
+        self.placeHolderTitleLabel = titleLabel
         self.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         let titleLabelLeading = NSLayoutConstraint(item: titleLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0)
@@ -91,7 +91,7 @@ public class HZPlaceHolderView: UIView {
             button.setTitleColor(.white, for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
             button.addTarget(self, action: #selector(clickButtonAction(_:)), for: .touchUpInside)
-            self.button = button
+            self.refreshButton = button
             self.addSubview(button)
             button.translatesAutoresizingMaskIntoConstraints = false
             let buttonHorizontal = NSLayoutConstraint( item: button, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0)
