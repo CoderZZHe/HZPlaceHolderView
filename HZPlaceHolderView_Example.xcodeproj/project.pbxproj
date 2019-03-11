@@ -12,6 +12,10 @@
 		E4FA665422364BA800ECC82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4FA665222364BA800ECC82E /* Main.storyboard */; };
 		E4FA665622364BA900ECC82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FA665522364BA800ECC82E /* Assets.xcassets */; };
 		E4FA665922364BA900ECC82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4FA665722364BA900ECC82E /* LaunchScreen.storyboard */; };
+		E4FA666822364C4600ECC82E /* UITableview_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA666722364C4600ECC82E /* UITableview_Extension.swift */; };
+		E4FA666A22364D0700ECC82E /* UICollectionView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA666922364D0700ECC82E /* UICollectionView_Extension.swift */; };
+		E4FA666C22364D5B00ECC82E /* HZPlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA666B22364D5B00ECC82E /* HZPlaceHolderView.swift */; };
+		E4FA666E2236550400ECC82E /* UIButton_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA666D2236550400ECC82E /* UIButton_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E4FA665522364BA800ECC82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4FA665822364BA900ECC82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4FA665A22364BA900ECC82E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4FA666722364C4600ECC82E /* UITableview_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableview_Extension.swift; sourceTree = "<group>"; };
+		E4FA666922364D0700ECC82E /* UICollectionView_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView_Extension.swift; sourceTree = "<group>"; };
+		E4FA666B22364D5B00ECC82E /* HZPlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZPlaceHolderView.swift; sourceTree = "<group>"; };
+		E4FA666D2236550400ECC82E /* UIButton_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		E4FA664D22364BA800ECC82E /* HZPlaceHolderView_Example */ = {
 			isa = PBXGroup;
 			children = (
+				E4FA666022364BE900ECC82E /* HZPlaceHolderView */,
 				E4FA664E22364BA800ECC82E /* AppDelegate.swift */,
 				E4FA665022364BA800ECC82E /* ViewController.swift */,
 				E4FA665222364BA800ECC82E /* Main.storyboard */,
@@ -62,6 +71,17 @@
 				E4FA665A22364BA900ECC82E /* Info.plist */,
 			);
 			path = HZPlaceHolderView_Example;
+			sourceTree = "<group>";
+		};
+		E4FA666022364BE900ECC82E /* HZPlaceHolderView */ = {
+			isa = PBXGroup;
+			children = (
+				E4FA666722364C4600ECC82E /* UITableview_Extension.swift */,
+				E4FA666922364D0700ECC82E /* UICollectionView_Extension.swift */,
+				E4FA666B22364D5B00ECC82E /* HZPlaceHolderView.swift */,
+				E4FA666D2236550400ECC82E /* UIButton_Extension.swift */,
+			);
+			path = HZPlaceHolderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FA666A22364D0700ECC82E /* UICollectionView_Extension.swift in Sources */,
+				E4FA666E2236550400ECC82E /* UIButton_Extension.swift in Sources */,
+				E4FA666C22364D5B00ECC82E /* HZPlaceHolderView.swift in Sources */,
 				E4FA665122364BA800ECC82E /* ViewController.swift in Sources */,
 				E4FA664F22364BA800ECC82E /* AppDelegate.swift in Sources */,
+				E4FA666822364C4600ECC82E /* UITableview_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
