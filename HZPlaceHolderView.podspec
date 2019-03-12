@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'HZPlaceHolderView'
-  s.version = '1.0.4'
+  s.version = '1.0.5'
   s.license = 'MIT'
   s.summary = 'An empty data placeholder view'
   s.homepage = 'https://github.com/CoderZZHe/HZPlaceHolderView'
@@ -18,8 +18,11 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/CoderZZHe/HZPlaceHolderView", :tag => s.version }
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'HZPlaceHolderView_Example/HZPlaceHolderView/*.swift'
+  s.source_files = 'HZPlaceHolderView_Example/Sources/**/*.swift'
   s.framework = 'UIKit'
+  s.requires_arc = true
   s.swift_version = '4.2'
+
+  s.dependency 'MJRefresh'
 
 end
