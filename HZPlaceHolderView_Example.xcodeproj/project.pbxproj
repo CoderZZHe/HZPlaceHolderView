@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		668A644B727822B2A36B52FE /* libPods-HZPlaceHolderView_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EEF53DEEA90AA25A8FD8378 /* libPods-HZPlaceHolderView_Example.a */; };
+		D235A7A26F20E56CBB91B7D5 /* Pods_HZPlaceHolderView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C04A5F211442FE69424776 /* Pods_HZPlaceHolderView_Example.framework */; };
 		E480559E2237867B002B65D9 /* HZRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480559D2237867B002B65D9 /* HZRefresh.swift */; };
 		E48055A522378BD6002B65D9 /* HZRefreshNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48055A222378BD6002B65D9 /* HZRefreshNormalHeader.swift */; };
 		E48055A622378BD6002B65D9 /* HZRefreshGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48055A322378BD6002B65D9 /* HZRefreshGifHeader.swift */; };
@@ -26,10 +26,9 @@
 
 /* Begin PBXFileReference section */
 		3D5F1F00DF2CEE302B04CB02 /* Pods-HZPlaceHolderView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZPlaceHolderView_Example.release.xcconfig"; path = "Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5EEF53DEEA90AA25A8FD8378 /* libPods-HZPlaceHolderView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZPlaceHolderView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C04A5F211442FE69424776 /* Pods_HZPlaceHolderView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HZPlaceHolderView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BB8B922D16385A62EE0104 /* Pods-HZPlaceHolderView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZPlaceHolderView_Example.debug.xcconfig"; path = "Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E480559D2237867B002B65D9 /* HZRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZRefresh.swift; sourceTree = "<group>"; };
-		E48055A122378965002B65D9 /* HZPlaceHolderView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HZPlaceHolderView-Bridging-Header.h"; sourceTree = "<group>"; };
 		E48055A222378BD6002B65D9 /* HZRefreshNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZRefreshNormalHeader.swift; sourceTree = "<group>"; };
 		E48055A322378BD6002B65D9 /* HZRefreshGifHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZRefreshGifHeader.swift; sourceTree = "<group>"; };
 		E48055A422378BD6002B65D9 /* HZRefreshBackNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZRefreshBackNormalFooter.swift; sourceTree = "<group>"; };
@@ -52,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				668A644B727822B2A36B52FE /* libPods-HZPlaceHolderView_Example.a in Frameworks */,
+				D235A7A26F20E56CBB91B7D5 /* Pods_HZPlaceHolderView_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +61,7 @@
 		64ABA5518381324A8E703774 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5EEF53DEEA90AA25A8FD8378 /* libPods-HZPlaceHolderView_Example.a */,
+				B1C04A5F211442FE69424776 /* Pods_HZPlaceHolderView_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,7 +122,6 @@
 				E4FA664E22364BA800ECC82E /* AppDelegate.swift */,
 				E4FA665022364BA800ECC82E /* ViewController.swift */,
 				E4A5FD5D2236689C0004DAFC /* HZPlaceHolderView_Extension.swift */,
-				E48055A122378965002B65D9 /* HZPlaceHolderView-Bridging-Header.h */,
 				E4FA665222364BA800ECC82E /* Main.storyboard */,
 				E4FA665522364BA800ECC82E /* Assets.xcassets */,
 				E4FA665722364BA900ECC82E /* LaunchScreen.storyboard */,
@@ -152,7 +150,7 @@
 				E4FA664722364BA800ECC82E /* Sources */,
 				E4FA664822364BA800ECC82E /* Frameworks */,
 				E4FA664922364BA800ECC82E /* Resources */,
-				D50999853330C60381BA308C /* [CP] Copy Pods Resources */,
+				5B4687459994D31838D382D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,7 +208,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D50999853330C60381BA308C /* [CP] Copy Pods Resources */ = {
+		5B4687459994D31838D382D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,18 +216,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7162DEBC806B60F45499CD6 /* [CP] Check Pods Manifest.lock */ = {
@@ -426,7 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hezhizhi.HZPlaceHolderView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HZPlaceHolderView_Example/HZPlaceHolderView-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,7 +443,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hezhizhi.HZPlaceHolderView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HZPlaceHolderView_Example/HZPlaceHolderView-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 public enum HZRefreshType: Int {
     /// 上下拉都有
