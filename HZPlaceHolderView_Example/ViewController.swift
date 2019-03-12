@@ -21,11 +21,6 @@ class ViewController: UIViewController {
         let tableview = UITableView(frame: view.bounds, style: .grouped)
         tableview.dataSource = self
         tableview.delegate = self
-        HZRefresh.refreshWithHead(tableview) {
-            DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-                tableview.mj_header.endRefreshing()
-            })
-        }
         view.addSubview(tableview)
         
     }

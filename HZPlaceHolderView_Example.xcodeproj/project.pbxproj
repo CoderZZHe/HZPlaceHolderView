@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D235A7A26F20E56CBB91B7D5 /* Pods_HZPlaceHolderView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C04A5F211442FE69424776 /* Pods_HZPlaceHolderView_Example.framework */; };
-		E480559E2237867B002B65D9 /* HZRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480559D2237867B002B65D9 /* HZRefresh.swift */; };
-		E48055A522378BD6002B65D9 /* HZRefreshNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48055A222378BD6002B65D9 /* HZRefreshNormalHeader.swift */; };
-		E48055A622378BD6002B65D9 /* HZRefreshGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48055A322378BD6002B65D9 /* HZRefreshGifHeader.swift */; };
-		E48055A722378BD6002B65D9 /* HZRefreshBackNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48055A422378BD6002B65D9 /* HZRefreshBackNormalFooter.swift */; };
 		E4A5FD5E2236689C0004DAFC /* HZPlaceHolderView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A5FD5D2236689C0004DAFC /* HZPlaceHolderView_Extension.swift */; };
 		E4FA664F22364BA800ECC82E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA664E22364BA800ECC82E /* AppDelegate.swift */; };
 		E4FA665122364BA800ECC82E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FA665022364BA800ECC82E /* ViewController.swift */; };
@@ -28,10 +24,6 @@
 		3D5F1F00DF2CEE302B04CB02 /* Pods-HZPlaceHolderView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZPlaceHolderView_Example.release.xcconfig"; path = "Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B1C04A5F211442FE69424776 /* Pods_HZPlaceHolderView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HZPlaceHolderView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BB8B922D16385A62EE0104 /* Pods-HZPlaceHolderView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZPlaceHolderView_Example.debug.xcconfig"; path = "Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E480559D2237867B002B65D9 /* HZRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZRefresh.swift; sourceTree = "<group>"; };
-		E48055A222378BD6002B65D9 /* HZRefreshNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZRefreshNormalHeader.swift; sourceTree = "<group>"; };
-		E48055A322378BD6002B65D9 /* HZRefreshGifHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZRefreshGifHeader.swift; sourceTree = "<group>"; };
-		E48055A422378BD6002B65D9 /* HZRefreshBackNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZRefreshBackNormalFooter.swift; sourceTree = "<group>"; };
 		E4A5FD5D2236689C0004DAFC /* HZPlaceHolderView_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HZPlaceHolderView_Extension.swift; sourceTree = "<group>"; };
 		E4FA664B22364BA800ECC82E /* HZPlaceHolderView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZPlaceHolderView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FA664E22364BA800ECC82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,28 +67,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E480559F2237868A002B65D9 /* HZRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				E480559D2237867B002B65D9 /* HZRefresh.swift */,
-				E48055A422378BD6002B65D9 /* HZRefreshBackNormalFooter.swift */,
-				E48055A322378BD6002B65D9 /* HZRefreshGifHeader.swift */,
-				E48055A222378BD6002B65D9 /* HZRefreshNormalHeader.swift */,
-			);
-			path = HZRefresh;
-			sourceTree = "<group>";
-		};
-		E48055A022378694002B65D9 /* HZPlaceHolderView */ = {
-			isa = PBXGroup;
-			children = (
-				E4FA666722364C4600ECC82E /* UITableview_Extension.swift */,
-				E4FA666922364D0700ECC82E /* UICollectionView_Extension.swift */,
-				E4FA666B22364D5B00ECC82E /* HZPlaceHolderView.swift */,
-				E4FA666D2236550400ECC82E /* UIButton_Extension.swift */,
-			);
-			path = HZPlaceHolderView;
-			sourceTree = "<group>";
-		};
 		E4FA664222364BA800ECC82E = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +88,7 @@
 		E4FA664D22364BA800ECC82E /* HZPlaceHolderView_Example */ = {
 			isa = PBXGroup;
 			children = (
-				E4FA666022364BE900ECC82E /* Sources */,
+				E4FA666022364BE900ECC82E /* HZPlaceHolderView */,
 				E4FA664E22364BA800ECC82E /* AppDelegate.swift */,
 				E4FA665022364BA800ECC82E /* ViewController.swift */,
 				E4A5FD5D2236689C0004DAFC /* HZPlaceHolderView_Extension.swift */,
@@ -130,13 +100,15 @@
 			path = HZPlaceHolderView_Example;
 			sourceTree = "<group>";
 		};
-		E4FA666022364BE900ECC82E /* Sources */ = {
+		E4FA666022364BE900ECC82E /* HZPlaceHolderView */ = {
 			isa = PBXGroup;
 			children = (
-				E48055A022378694002B65D9 /* HZPlaceHolderView */,
-				E480559F2237868A002B65D9 /* HZRefresh */,
+				E4FA666722364C4600ECC82E /* UITableview_Extension.swift */,
+				E4FA666922364D0700ECC82E /* UICollectionView_Extension.swift */,
+				E4FA666B22364D5B00ECC82E /* HZPlaceHolderView.swift */,
+				E4FA666D2236550400ECC82E /* UIButton_Extension.swift */,
 			);
-			path = Sources;
+			path = HZPlaceHolderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +122,6 @@
 				E4FA664722364BA800ECC82E /* Sources */,
 				E4FA664822364BA800ECC82E /* Frameworks */,
 				E4FA664922364BA800ECC82E /* Resources */,
-				5B4687459994D31838D382D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,28 +179,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5B4687459994D31838D382D4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HZPlaceHolderView_Example/Pods-HZPlaceHolderView_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D7162DEBC806B60F45499CD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,14 +211,10 @@
 				E4FA666A22364D0700ECC82E /* UICollectionView_Extension.swift in Sources */,
 				E4FA666E2236550400ECC82E /* UIButton_Extension.swift in Sources */,
 				E4FA666C22364D5B00ECC82E /* HZPlaceHolderView.swift in Sources */,
-				E480559E2237867B002B65D9 /* HZRefresh.swift in Sources */,
 				E4FA665122364BA800ECC82E /* ViewController.swift in Sources */,
-				E48055A522378BD6002B65D9 /* HZRefreshNormalHeader.swift in Sources */,
 				E4FA664F22364BA800ECC82E /* AppDelegate.swift in Sources */,
 				E4A5FD5E2236689C0004DAFC /* HZPlaceHolderView_Extension.swift in Sources */,
 				E4FA666822364C4600ECC82E /* UITableview_Extension.swift in Sources */,
-				E48055A722378BD6002B65D9 /* HZRefreshBackNormalFooter.swift in Sources */,
-				E48055A622378BD6002B65D9 /* HZRefreshGifHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

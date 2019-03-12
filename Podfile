@@ -4,6 +4,6 @@ use_frameworks!
 
 target 'HZPlaceHolderView_Example' do
 
-    pod 'MJRefresh'
+#    pod 'MJRefresh'
 
 end

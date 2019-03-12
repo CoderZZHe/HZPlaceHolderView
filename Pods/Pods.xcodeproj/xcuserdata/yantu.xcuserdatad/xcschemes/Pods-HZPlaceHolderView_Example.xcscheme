@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "64E680736EC0180B2B216C357A5B59C1"
+               BlueprintIdentifier = "5B1121D903FEB995B0D048CEA42036C6"
                BuildableName = "Pods_HZPlaceHolderView_Example.framework"
                BlueprintName = "Pods-HZPlaceHolderView_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "64E680736EC0180B2B216C357A5B59C1"
+            BlueprintIdentifier = "5B1121D903FEB995B0D048CEA42036C6"
             BuildableName = "Pods_HZPlaceHolderView_Example.framework"
             BlueprintName = "Pods-HZPlaceHolderView_Example"
             ReferencedContainer = "container:Pods.xcodeproj">
