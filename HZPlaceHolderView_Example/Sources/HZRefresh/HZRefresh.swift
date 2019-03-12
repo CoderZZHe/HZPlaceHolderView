@@ -22,10 +22,11 @@ public enum HZRefreshHeaderType: Int {
     case gif = 1
 }
 
-public class HZRefresh: UIView {
+public class HZRefresh {
     
+    //MARK: - 上下拉
     /**
-     刷新
+     默认上下拉刷新
      
      - parameter refreshScrollView:                 需要刷新的scrollView
      - parameter refreshType:                        上下拉、上拉、下拉
@@ -37,16 +38,75 @@ public class HZRefresh: UIView {
      - parameter HeaderRefreshBlock:              下拉block
      - parameter FooterRefreshBlock:               上拉block
      */
-    public class func refresh(refreshScrollView: UIScrollView,
-                                      refreshType: HZRefreshType,
+    public class func refreshWithHeadFoot(_ refreshScrollView: UIScrollView,
+                                      refreshType: HZRefreshType = .HZAllRefresh,
                                       refreshHeaderType: HZRefreshHeaderType = .normal,
                                       isFirstRefresh: Bool = false,
                                       lastUpdatedTimeLabelHidden: Bool = true,
                                       stateLabelHidden: Bool = false,
                                       labelTextColor: UIColor? = nil,
-                                      headerRefreshBlock: @escaping ()->Void,
-                                      footerRefreshBlock: (()->Void)? = nil) {
-        
+                                      headerRefreshBlock: @escaping () -> Void,
+                                      footerRefreshBlock: @escaping () -> Void) {
+        HZRefresh.setRefresh(refreshScrollView, refreshType: refreshType, refreshHeaderType: refreshHeaderType, isFirstRefresh: isFirstRefresh, lastUpdatedTimeLabelHidden: lastUpdatedTimeLabelHidden, stateLabelHidden: stateLabelHidden, labelTextColor: labelTextColor, headerRefreshBlock: headerRefreshBlock, footerRefreshBlock: footerRefreshBlock)
+    }
+    
+    //MARK: - 下拉
+    /// 默认下拉刷新
+    public class func refreshWithHead(_ refreshScrollView: UIScrollView,
+                                      refreshType: HZRefreshType = .HZHeaderRefresh,
+                                      refreshHeaderType: HZRefreshHeaderType = .normal,
+                                      isFirstRefresh: Bool = false,
+                                      lastUpdatedTimeLabelHidden: Bool = true,
+                                      stateLabelHidden: Bool = false,
+                                      labelTextColor: UIColor? = nil,
+                                      headerRefreshBlock: @escaping () -> Void) {
+        HZRefresh.refreshWithHead(refreshScrollView, refreshType: refreshType, refreshHeaderType: refreshHeaderType, isFirstRefresh: isFirstRefresh, lastUpdatedTimeLabelHidden: lastUpdatedTimeLabelHidden, stateLabelHidden: stateLabelHidden, labelTextColor: labelTextColor, headerRefreshBlock: headerRefreshBlock, footerRefreshBlock: nil)
+    }
+    
+    /// 默认下拉刷新
+    fileprivate class func refreshWithHead(_ refreshScrollView: UIScrollView,
+                                      refreshType: HZRefreshType,
+                                      refreshHeaderType: HZRefreshHeaderType,
+                                      isFirstRefresh: Bool,
+                                      lastUpdatedTimeLabelHidden: Bool,
+                                      stateLabelHidden: Bool,
+                                      labelTextColor: UIColor?,
+                                      headerRefreshBlock: @escaping () -> Void,
+                                      footerRefreshBlock: (() -> Void)?) {
+        HZRefresh.setRefresh(refreshScrollView, refreshType: refreshType, refreshHeaderType: refreshHeaderType, isFirstRefresh: isFirstRefresh, lastUpdatedTimeLabelHidden: lastUpdatedTimeLabelHidden, stateLabelHidden: stateLabelHidden, labelTextColor: labelTextColor, headerRefreshBlock: headerRefreshBlock, footerRefreshBlock: footerRefreshBlock)
+    }
+    
+    //MARK: - 上拉
+    /// 默认上拉刷新
+    public class func refreshWithFooter(_ refreshScrollView: UIScrollView,
+                                      refreshType: HZRefreshType = .HZFooterRefresh,
+                                      footerRefreshBlock: @escaping () -> Void) {
+        HZRefresh.refreshWithFooter(refreshScrollView, refreshType: refreshType, refreshHeaderType: .normal, isFirstRefresh: false, lastUpdatedTimeLabelHidden: true, stateLabelHidden: false, labelTextColor: nil, headerRefreshBlock: nil, footerRefreshBlock: footerRefreshBlock)
+    }
+    
+    /// 默认上拉刷新
+    fileprivate class func refreshWithFooter(_ refreshScrollView: UIScrollView,
+                                           refreshType: HZRefreshType,
+                                           refreshHeaderType: HZRefreshHeaderType,
+                                           isFirstRefresh: Bool,
+                                           lastUpdatedTimeLabelHidden: Bool,
+                                           stateLabelHidden: Bool,
+                                           labelTextColor: UIColor?,
+                                           headerRefreshBlock: (() -> Void)?,
+                                           footerRefreshBlock: @escaping () -> Void) {
+        HZRefresh.setRefresh(refreshScrollView, refreshType: refreshType, refreshHeaderType: refreshHeaderType, isFirstRefresh: isFirstRefresh, lastUpdatedTimeLabelHidden: lastUpdatedTimeLabelHidden, stateLabelHidden: stateLabelHidden, labelTextColor: labelTextColor, headerRefreshBlock: headerRefreshBlock, footerRefreshBlock: footerRefreshBlock)
+    }
+    
+    //MARK: - 内部实现方法
+    fileprivate class func setRefresh(_ refreshScrollView: UIScrollView,
+                                      refreshType: HZRefreshType = .HZAllRefresh,
+                                      refreshHeaderType: HZRefreshHeaderType = .normal,
+                                      isFirstRefresh: Bool = false,
+                                      lastUpdatedTimeLabelHidden: Bool = true,
+                                      stateLabelHidden: Bool = false,
+                                      labelTextColor: UIColor? = nil,
+                                      headerRefreshBlock: (() -> Void)?,
+                                      footerRefreshBlock: (() -> Void)?) {
         switch refreshType {
         /// 上下拉
         case .HZAllRefresh:
@@ -55,11 +115,15 @@ public class HZRefresh: UIView {
             switch refreshHeaderType {
             case .normal:
                 headerRef = HZRefreshNormalHeader(refreshingBlock: {
-                    headerRefreshBlock()
+                    if let _headerBlock = headerRefreshBlock {
+                        _headerBlock()
+                    }
                 })
             case .gif:
                 headerRef = HZRefreshGifHeader(refreshingBlock: {
-                    headerRefreshBlock()
+                    if let _headerBlock = headerRefreshBlock {
+                        _headerBlock()
+                    }
                 })
             }
             headerRef?.lastUpdatedTimeLabel.isHidden = lastUpdatedTimeLabelHidden
@@ -87,11 +151,15 @@ public class HZRefresh: UIView {
             switch refreshHeaderType {
             case .normal:
                 headerRef = HZRefreshNormalHeader(refreshingBlock: {
-                    headerRefreshBlock()
+                    if let _headerBlock = headerRefreshBlock {
+                        _headerBlock()
+                    }
                 })
             case .gif:
                 headerRef = HZRefreshGifHeader(refreshingBlock: {
-                    headerRefreshBlock()
+                    if let _headerBlock = headerRefreshBlock {
+                        _headerBlock()
+                    }
                 })
             }
             headerRef?.lastUpdatedTimeLabel.isHidden = lastUpdatedTimeLabelHidden
@@ -115,5 +183,6 @@ public class HZRefresh: UIView {
             refreshScrollView.mj_footer = footerRef
         }
     }
+    
 }
 

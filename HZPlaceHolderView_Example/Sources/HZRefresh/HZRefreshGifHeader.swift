@@ -19,9 +19,7 @@ class HZRefreshGifHeader: MJRefreshGifHeader {
         self.setTitle("下拉即可刷新", for: .idle)
         self.setTitle("释放即刷新", for: .pulling)
         self.setTitle("正在刷新...", for: .refreshing)
-        
         //  self.setImages(<#T##images: [Any]!##[Any]!#>, for: <#T##MJRefreshState#>)
-        
         self.stateLabel.font = UIFont.systemFont(ofSize: 13)
         
     }
