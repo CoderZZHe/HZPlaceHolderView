@@ -82,7 +82,7 @@ extension UITableView {
             if sections == 1 {  // tableview的分组数是否为1, 用于判断外部实现了numberOfSections并写死==1的情况
                 if let row = src?.tableView(self, numberOfRowsInSection: (sections - 1)), row == 0 {  // tableview在分组为1的情况下, row个数是否为0
                     // tableview在分组为1的情况下, row个数为0的情况下, 判断headerView的高度是否为0.01
-                    if let headHeight = delegate?.tableView?(self, heightForHeaderInSection: (sections - 1)), headHeight > 0.01, let _ = delegate?.tableView?(self, viewForHeaderInSection: (sections - 1)) {
+                    if let _ = delegate?.tableView?(self, viewForHeaderInSection: (sections - 1)), let headHeight = delegate?.tableView?(self, heightForHeaderInSection: (sections - 1)), headHeight > 0.01 {
                         isEmpty = false
                     }else {
                         isEmpty = true
