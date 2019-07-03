@@ -77,12 +77,12 @@ extension UITableView {
             self.placeHolderDelegate = _src as? HZTableViewPlaceHolderDelegate
         }
         
-        if let _newSections = src?.numberOfSections?(in: self) {   // 若代理实现了numberOfSections方法, 默认有多个分组, 需先判断section是否为0
-            isEmpty = _newSections == 0
-            if _newSections == 1 {  // tableview的分组数是否为1, 用于判断外部实现了numberOfSections并写死==1的情况
-                if let row = src?.tableView(self, numberOfRowsInSection: (_newSections - 1)), row == 0 {  // tableview在分组为1的情况下, row个数是否为0
+        if let sections = src?.numberOfSections?(in: self) {   // 若代理实现了numberOfSections方法, 默认有多个分组, 需先判断section是否为0
+            isEmpty = sections == 0
+            if sections == 1 {  // tableview的分组数是否为1, 用于判断外部实现了numberOfSections并写死==1的情况
+                if let row = src?.tableView(self, numberOfRowsInSection: (sections - 1)), row == 0 {  // tableview在分组为1的情况下, row个数是否为0
                     // tableview在分组为1的情况下, row个数为0的情况下, 判断headerView的高度是否为0.01
-                    if let headHeight = delegate?.tableView?(self, heightForHeaderInSection: (_newSections - 1)), headHeight > 0.01 {
+                    if let headHeight = delegate?.tableView?(self, heightForHeaderInSection: (sections - 1)), headHeight > 0.01, let _ = delegate?.tableView?(self, viewForHeaderInSection: (sections - 1)) {
                         isEmpty = false
                     }else {
                         isEmpty = true
