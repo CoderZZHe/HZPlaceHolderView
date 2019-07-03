@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/CoderZZHe/HZPlaceHolderView'
   s.author = { 'HeZhizhi' => 'coderhzz@163.com' }
   s.social_media_url = 'https://www.jianshu.com/u/9767e7dda727'
-  s.source = { :git => "https://github.com/CoderZZHe/HZPlaceHolderView", :tag => s.version }
+  s.source = { :git => "https://github.com/CoderZZHe/HZPlaceHolderView.git", :tag => s.version }
 
   s.ios.deployment_target = '8.0'
   s.source_files = 'HZPlaceHolderView_Example/HZPlaceHolderView/*.swift'
