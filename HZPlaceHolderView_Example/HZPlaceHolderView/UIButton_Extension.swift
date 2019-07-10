@@ -17,7 +17,7 @@ public enum HZButtonEdgeInsetsStyle: Int {
 
 extension UIButton {
     
-    open override var isHighlighted: Bool {
+    override open var isHighlighted: Bool {
         set {
         }
         get {
@@ -88,7 +88,7 @@ extension UIButton {
 @IBDesignable
 public extension UIButton  {
     
-    @IBInspectable public var hz_corner: CGFloat {
+    @IBInspectable var hz_corner: CGFloat {
         get {
             return self.layer.cornerRadius
         }
@@ -99,7 +99,7 @@ public extension UIButton  {
     }
     
     // MARK: button的image位置间隔 上0 下1 左2 右3     如：0,7   代表image在上 、title与image间隔为7
-    @IBInspectable public var hz_edgeInsetsStyleSpace: String {
+    @IBInspectable var hz_edgeInsetsStyleSpace: String {
         get {
             return self.hz_edgeInsetsStyleSpace
         }

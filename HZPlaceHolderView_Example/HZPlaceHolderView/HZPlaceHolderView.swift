@@ -21,11 +21,7 @@ public class HZPlaceHolderView: UIView {
     fileprivate var imageWidth: CGFloat = 0
     fileprivate var imageHeight: CGFloat = 0
     
-    public class func createWithTitleImage(_ titleString: String, image: Any) -> HZPlaceHolderView? {
-        return HZPlaceHolderView(titleString, image: image, buttonTitle: nil, clickButtonBlock: nil)
-    }
-    
-    public class func createWithTitleImage(_ titleString: String, image: Any, buttonTitle: String?, clickButtonBlock: (() -> Void)?) -> HZPlaceHolderView? {
+    public class func create(_ titleString: String, image: Any, buttonTitle: String? = nil, clickButtonBlock: (() -> Void)? = nil) -> HZPlaceHolderView? {
         return HZPlaceHolderView(titleString, image: image, buttonTitle: buttonTitle, clickButtonBlock: clickButtonBlock)
     }
     
