@@ -60,11 +60,11 @@ enum ExamPlaceHolderType: Int {
 extension HZPlaceHolderView {
     
     class func createWithType(_ type: ExamPlaceHolderType) -> HZPlaceHolderView? {
-        return HZPlaceHolderView.createWithTitleImage(type.titleString, image: type.imageString)
+        return HZPlaceHolderView.create(type.titleString, image: type.imageString)
     }
     
     class func createWithType(_ type: ExamPlaceHolderType, buttonTitle: String?, clickButtonBlock: (() -> Void)?) -> HZPlaceHolderView? {
-        return HZPlaceHolderView.createWithTitleImage(type.titleString, image: type.imageString, buttonTitle: buttonTitle, clickButtonBlock: clickButtonBlock)
+        return HZPlaceHolderView.create(type.titleString, image: type.imageString, buttonTitle: buttonTitle, clickButtonBlock: clickButtonBlock)
     }
     
 }
